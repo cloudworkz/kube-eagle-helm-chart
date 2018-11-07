@@ -1,0 +1,7 @@
+### Kube-eagle ###
+
+export POD_NAME=$(kubectl get pods --namespace {{ .Release.Namespace }} -l "app={{ template "kube-eagle.name" . }},release={{ .Release.Name }}" -o jsonpath="{.items[0].metadata.name}")
+
+echo "To test the functionality, setup a kubectl port-forward on your local machine. Then you can visit the below URLs"
+echo "Visit http://127.0.0.1:8080 to check the exposed metrics"
+echo "Visit http://127.0.0.1:8080/health to make sure kube eagle is running as expected"
