@@ -3,12 +3,12 @@ entries:
   kube-eagle:
   - apiVersion: v1
     appVersion: "1.0"
-    created: 2018-11-08T16:37:06.33251067+01:00
+    created: 2018-11-08T16:47:54.339477899+01:00
     description: Prometheus exporter for Kubernetes pod & node resource requests,
       limits and usage.
-    digest: 46c2f2433c2b2b8cddb75d7e37e7db4cbd5275364134db41ea85212d7d064d95
+    digest: edef8e22096452cef0597f90a59983bf699d0602d7d549de74018dd060191446
     name: kube-eagle
     urls:
-    - kube-eagle/kube-eagle-1.0.1.tgz
-    version: 1.0.1
-generated: 2018-11-08T16:37:06.332004871+01:00
+    - kube-eagle/kube-eagle-1.0.2.tgz
+    version: 1.0.2
+generated: 2018-11-08T16:47:54.338963922+01:00
