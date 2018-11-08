@@ -43,3 +43,9 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# Create and use role based access resources
+rbac:
+  create: true
+
+serviceAccountName: sa-kube-eagle

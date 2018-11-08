@@ -23,6 +23,7 @@ spec:
         app: {{ template "kube-eagle.name" . }}
         release: {{ .Release.Name }}
     spec:
+      serviceAccountName: {{ .Values.serviceAccountName }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
