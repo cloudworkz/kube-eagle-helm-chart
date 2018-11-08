@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: nginx
-  tag: stable
+  repository: quay.io/google-cloud-tools/kube-eagle
+  tag: 1.0.0
   pullPolicy: IfNotPresent
 
 service:
