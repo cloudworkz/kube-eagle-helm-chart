@@ -49,3 +49,9 @@ rbac:
   create: true
 
 serviceAccountName: sa-kube-eagle
+
+# Create ServiceMonitor custom resource required for Prometheus Operator to scrape the service
+serviceMonitor:
+  create: false
+  interval: 10s
+  scrapeTimeout: 10s

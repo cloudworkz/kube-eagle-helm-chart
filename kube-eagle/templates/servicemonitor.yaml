@@ -1,0 +1,20 @@
+{{- if .Values.serviceMonitor.create }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    app: {{ template "kube-eagle.name" . }}
+    chart: {{ template "kube-eagle.chart" . }}
+    release: prometheus-operator
+    heritage: {{ .Release.Service }}
+  name: {{ template "kube-eagle.fullname" . }}
+spec:
+  endpoints:
+  - interval: {{ .Values.serviceMonitor.interval }}
+    port: http
+    path: /metrics
+    scrapeTimeout: {{ .Values.serviceMonitor.interval }}
+  selector:
+    matchLabels:
+      app: {{ template "kube-eagle.name" . }}
+{{- end }}
