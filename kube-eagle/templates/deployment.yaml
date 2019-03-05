@@ -36,10 +36,12 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
           livenessProbe:
+            timeoutSeconds: {{ .Values.livenessProbe.timeoutSeconds }}
             httpGet:
               path: /health
               port: http
           readinessProbe:
+            timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
             httpGet:
               path: /health
               port: http
