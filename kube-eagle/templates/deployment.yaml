@@ -29,8 +29,14 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
-            - name: PORT
-              value: {{ .Values.service.port | quote }}
+            - name: TELEMETRY_HOST
+              value: {{ .Values.telemetry.host | quote }}
+            - name: TELEMETRY_PORT
+              value: {{ .Values.telemetry.port | quote }}
+            - name: METRICS_NAMESPACE
+              value: {{ .Values.metricsNamespace | quote }}
+            - name: LOG_LEVEL
+              value: {{ .Values.logLevel | quote }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}

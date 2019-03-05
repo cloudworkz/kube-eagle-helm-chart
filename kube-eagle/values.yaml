@@ -53,3 +53,12 @@ readinessProbe:
 
 livenessProbe:
   timeoutSeconds: 5
+
+# Kube Eagle specific settings
+telemetry:
+  host: 0.0.0.0
+  port: 8080
+
+metricsNamespace: eagle
+
+logLevel: info
