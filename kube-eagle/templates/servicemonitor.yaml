@@ -5,8 +5,15 @@ metadata:
   labels:
     app: {{ template "kube-eagle.name" . }}
     chart: {{ template "kube-eagle.chart" . }}
-    release: prometheus-operator
+    release: {{ if .Values.serviceMonitor.additionalLabels -}}
+      {{- .Release.Name -}}
+    {{- else -}}
+      {{- .Values.serviceMonitor.releaseLabel -}}
+    {{- end }}
     heritage: {{ .Release.Service }}
+{{- if .Values.serviceMonitor.additionalLabels }}
+{{ toYaml .Values.serviceMonitor.additionalLabels | indent 4 }}
+{{- end -}}
   name: {{ template "kube-eagle.fullname" . }}
 spec:
   endpoints:

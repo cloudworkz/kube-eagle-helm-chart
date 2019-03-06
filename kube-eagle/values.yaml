@@ -68,3 +68,11 @@ serviceMonitor:
   create: false
   interval: 10s
   scrapeTimeout: 10s
+  # By default, Prometheus Operator uses its own Release label as the selector for ServiceMonitors.
+  # Update this to match the release name of your Prometheus Operator installation if 
+  # you aren't using custom match labels on your Prometheus definition.
+  releaseLabel: prometheus-operator
+  # Additional labels to add to the ServiceMonitor in case Prometheus Operator is configured with 
+  # different matchLabels configuration, to make sure it matches this ServiceMonitor.
+  # If this is defined, the release label of the service monitor will match kube-eagle's one
+  additionalLabels: 
