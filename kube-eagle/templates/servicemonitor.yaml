@@ -12,8 +12,10 @@ metadata:
     {{- end }}
     heritage: {{ .Release.Service }}
 {{- if .Values.serviceMonitor.additionalLabels }}
-{{ toYaml .Values.serviceMonitor.additionalLabels | indent 4 }}
-{{- end -}}
+{{- range $key, $value := .Values.serviceMonitor.additionalLabels }}
+    {{ $key }}: {{ $value }}
+{{- end }}
+{{- end }}
   name: {{ template "kube-eagle.fullname" . }}
 spec:
   endpoints:
