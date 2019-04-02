@@ -63,6 +63,11 @@ metricsNamespace: eagle
 
 logLevel: info
 
+podSecurityContext:
+  runAsUser: 99
+  fsGroup: 99
+containerSecurityContext: {}
+
 # Create ServiceMonitor custom resource required for Prometheus Operator to scrape the service
 serviceMonitor:
   create: false
