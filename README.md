@@ -31,3 +31,4 @@ helm install --name=kube-eagle kube-eagle/kube-eagle
 | `podSecurityContext.runAsUser`    | UserID to use for the pod                                          | `99`                  |
 | `podSecurityContext.runAsUser`    | User group to use for the pod                                      | `99`                  |
 | `containerSecurityContext`        | Security Context for the kube eagle container                      | `{}`                  |
+| `podAnnotations`                  | Pod annotations                                                    | `{}`                  |
