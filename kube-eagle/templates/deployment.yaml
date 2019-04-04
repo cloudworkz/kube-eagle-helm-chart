@@ -16,9 +16,9 @@ spec:
   template:
     metadata:
       annotations:
-{{- with .Values.podAnnotations }}
-{{- toYaml . | nindent 8 }}
-{{- end }}
+        {{- with .Values.podAnnotations }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
         prometheus.io/scrape: "true"
         prometheus.io/port: {{ .Values.service.port | quote }}
         prometheus.io/path: "/metrics"
