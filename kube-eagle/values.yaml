@@ -41,6 +41,8 @@ tolerations: []
 
 affinity: {}
 
+podAnnotations: {}
+
 # Create and use role based access resources
 rbac:
   create: true
