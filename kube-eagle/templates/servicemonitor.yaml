@@ -22,7 +22,7 @@ spec:
   - interval: {{ .Values.serviceMonitor.interval }}
     port: http
     path: /metrics
-    scrapeTimeout: {{ .Values.serviceMonitor.interval }}
+    scrapeTimeout: {{ .Values.serviceMonitor.scrapeTimeout }}
   selector:
     matchLabels:
       app: {{ template "kube-eagle.name" . }}
