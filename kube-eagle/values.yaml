@@ -49,6 +49,8 @@ rbac:
 
 serviceAccountName: sa-kube-eagle
 
+priorityClassName: ""
+
 # Healthness and readiness probes need relatively large timeouts because they query the kubernetes master
 readinessProbe:
   timeoutSeconds: 5
