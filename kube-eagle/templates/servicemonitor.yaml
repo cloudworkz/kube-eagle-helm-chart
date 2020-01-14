@@ -23,6 +23,7 @@ spec:
     port: http
     path: /metrics
     scrapeTimeout: {{ .Values.serviceMonitor.scrapeTimeout }}
+    honorLabels: true
   selector:
     matchLabels:
       app: {{ template "kube-eagle.name" . }}
