@@ -33,3 +33,4 @@ helm install --name=kube-eagle kube-eagle/kube-eagle
 | `containerSecurityContext`        | Security Context for the kube eagle container                      | `{}`                  |
 | `podAnnotations`                  | Pod annotations                                                    | `{}`                  |
 | `priorityClassName`               | Priority Class to be used by the pod                               | `""`                  |
+| `env`                             | Additional environment variables                                   | `{}`                  |
