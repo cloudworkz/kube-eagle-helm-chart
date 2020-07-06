@@ -3,7 +3,7 @@ replicaCount: 1
 
 image:
   repository: quay.io/google-cloud-tools/kube-eagle
-  tag: 1.1.0
+  tag: 1.1.4
   pullPolicy: IfNotPresent
 
 service:
