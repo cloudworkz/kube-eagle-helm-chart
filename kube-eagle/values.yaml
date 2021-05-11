@@ -67,6 +67,8 @@ metricsNamespace: eagle
 
 logLevel: info
 
+enableLabels: false
+
 podSecurityContext:
   runAsUser: 99
   fsGroup: 99

@@ -51,6 +51,8 @@ spec:
               value: {{ .Values.metricsNamespace | quote }}
             - name: LOG_LEVEL
               value: {{ .Values.logLevel | quote }}
+            - name: ENABLE_LABELS
+              value: {{ .Values.enableLabels | quote }}
 {{- if .Values.env }}
 {{- with .Values.env }}
     {{- toYaml . | nindent 12 }}

@@ -30,6 +30,7 @@ helm install --name=kube-eagle kube-eagle/kube-eagle
 | `serviceMonitor.additionalLabels` | Additional labels to add to the ServiceMonitor                     |                       |
 | `metricsNamespace`                | Prefix of exposed prometheus metrics                               | `eagle`               |
 | `logLevel`                        | Logger's log granularity (debug, info, warn, error, fatal, panic)  | `info`                |
+| `enableLabels`                    | Add label information for each pod-related metrics                 | `false`                |
 | `ingress.enabled`                 | Enables Ingress                                                    | `false`               |
 | `ingress.annotations`             | Ingress annotations                                                | `{}`                  |
 | `ingress.hosts`                   | Ingress accepted hostnames                                         | `[]`                  |
