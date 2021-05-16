@@ -30,10 +30,6 @@ helm install --name=kube-eagle kube-eagle/kube-eagle
 | `serviceMonitor.additionalLabels` | Additional labels to add to the ServiceMonitor                     |                       |
 | `metricsNamespace`                | Prefix of exposed prometheus metrics                               | `eagle`               |
 | `logLevel`                        | Logger's log granularity (debug, info, warn, error, fatal, panic)  | `info`                |
-| `ingress.enabled`                 | Enables Ingress                                                    | `false`               |
-| `ingress.annotations`             | Ingress annotations                                                | `{}`                  |
-| `ingress.hosts`                   | Ingress accepted hostnames                                         | `[]`                  |
-| `ingress.tls`                     | Ingress TLS configuration                                          | `[]`                  |
 | `podSecurityContext.runAsUser`    | UserID to use for the pod                                          | `99`                  |
 | `podSecurityContext.runAsUser`    | User group to use for the pod                                      | `99`                  |
 | `containerSecurityContext`        | Security Context for the kube eagle container                      | `{}`                  |
